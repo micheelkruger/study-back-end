@@ -1,0 +1,30 @@
+@EstudosApi_HostAddress = http://localhost:5147
+
+GET {{EstudosApi_HostAddress}}/api/products
+Accept: application/json
+
+###
+
+GET {{EstudosApi_HostAddress}}/api/admin/products
+Accept: application/json
+
+###
+
+POST {{EstudosApi_HostAddress}}/api/admin/products
+Content-Type: application/json
+
+{
+  "nome": "Caderno",
+  "descricao": "Caderno para anotações",
+  "preco": 19.90,
+  "imageUrl": "https://example.com/caderno.jpg"
+}
+
+###
+
+PATCH {{EstudosApi_HostAddress}}/api/admin/products/1/status
+Content-Type: application/json
+
+{
+  "ativo": false
+}
